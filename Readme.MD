@@ -12,7 +12,8 @@ This project is a tool that combines different attack techniques in the field of
     - [Fake Websites](#fake-websites)
 3. [Running](#running)
 4. [Notes](#notes)
-5. [License](#license)
+5. [Disclaimer](#disclaimer)
+6. [License](#license)
 
 
 ## Installation
@@ -65,11 +66,23 @@ python main.py -t <target_ip> -r <router_ip> -l <local_ip>
 - Apache2 must be started before using the project.
 - The project should be run as root and it should be noted that the html file in the Apache file will be deleted when it is run.
 - It should be remembered that browsers keep DNS cache, so it may be difficult to spoof frequently visited sites.
-- Instagram ve Twitter yanında Websiteos seçilmesinin sebebi, sitenin http kullanması ve tarayıcıların DNS cache'inde tutulmaması.
 - Using the project for malicious purposes is prohibited and no liability is accepted.
 - If your interface is not wlan0, do not forget to change -> "packet_listener.py, line 36"
-- When you interrupted the project with "ctrl + c", do it twice. When you interrupted project, run "iptables --flush". Project does not stop exactly. Project need more configuration.
 
+
+### Disclaimer
+
+This project, "MITM Attacker," is intended for educational and testing purposes only. The project demonstrates various network security attack techniques, including ARP poisoning, DNS spoofing, and packet sniffing.
+
+**Usage Warning:** This tool should be used responsibly and solely on systems and networks for which you have explicit authorization. Unauthorized use of this tool for malicious or illegal activities is strictly prohibited. The project's author and contributors do not endorse, encourage, or support any form of unauthorized access, data interception, or other illicit activities.
+
+By using this project, you acknowledge that you have read and understood this disclaimer. The project is provided "as is," and the authors make no representations or warranties regarding the accuracy, completeness, or suitability of the project for any purpose.
+
+The authors shall not be liable for any direct, indirect, consequential, or incidental damages arising out of the use or inability to use the project. Users are solely responsible for their actions and should comply with all applicable laws and ethical guidelines.
+
+**Legal Notice:** Using this project for unauthorized purposes may lead to legal consequences. It is your responsibility to ensure compliance with all relevant laws and regulations.
+
+**Warning:** Any misuse of this project may result in legal consequences. Use it at your own risk and always respect the privacy and security of others.
 
 
 ### License
