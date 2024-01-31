@@ -43,4 +43,3 @@ def arp_spoof(target_ip, spoof_ip):
         print("\n[+] Stopping the ARP spoofing attack...")
         restore(target_ip, spoof_ip)
         print("[+] ARP tables restored.")
-
