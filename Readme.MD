@@ -57,12 +57,13 @@ The `instagram`, `twitter` and `websiteos` directories in the project contain fa
 
 
 ```bash
-python main.py -t <hedef_ip> -r <router_ip> -l <local_ip>
+python main.py -t <target_ip> -r <router_ip> -l <local_ip>
 ```
 
 ### Notes
 
 - Apache2 must be started before using the project.
+- The project should be run as root and it should be noted that the html file in the Apache file will be deleted when it is run.
 - It should be remembered that browsers keep DNS cache, so it may be difficult to spoof frequently visited sites.
 - Instagram ve Twitter yanında Websiteos seçilmesinin sebebi, sitenin http kullanması ve tarayıcıların DNS cache'inde tutulmaması.
 - Using the project for malicious purposes is prohibited and no liability is accepted.
